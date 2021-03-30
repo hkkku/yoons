@@ -1,4 +1,13 @@
-.wrap{width: 100%; height: auto;}
-header img{position: absolute; width: 100px; height: 100px; z-index: 10; top: 10px; left: 50px;} 
-.bannerImg{width: 100%; height: 80vh; overflow: hidden;}
+body{overflow-x: hidden;}
+.wrap{width: 100%; height: auto; overflow-x:hidden;}
+header{display: flex; flex-wrap: wrap;}
+.logoBox{width: 20%; position: fixed; z-index: 10; top: 10px; left: 50px;}
+.logoBox img{width: 100px; height: 100px;} 
+#banner{overflow: hidden; display: flex; flex-wrap: nowrap; position: fixed;z-index: -10;  white-space:nowrap; top: 0; left: 0; right: 0; bottom: 0;}
+.bannerImg{ height: 100vh; overflow: hidden; display: flex; position: relative; flex: 0 0 100vw; align-items: center; justify-content:center;}
 .bannerImg img{width: 100%;}
+.gnbWrap{position: fixed; width: 80%; z-index: 1; display: flex; justify-content: flex-end; right: 100px; top: 50px;}
+#gnb li{float: left; margin-left: 50px;}
+#gnb li a{font-size: 17px; color: #fff; font-family: 'NEXON Lv1 Gothic OTF Light'; transition: all 0.4s ease;}
+#gnb li .user{border: 1px solid #fff; padding: 10px; border-radius: 100%;}
+#gnb li a:hover{filter: blur(2px);}
