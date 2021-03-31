@@ -1,11 +1,16 @@
-body{overflow-x: hidden;}
+html {scroll-behavior: smooth;}
+body{overflow: hidden;}
+::-webkit-scrollbar {display: none;}
 .wrap{width: 100%; height: auto; overflow-x:hidden;}
 header{display: flex; flex-wrap: wrap;}
 .logoBox{width: 20%; position: fixed; z-index: 10; top: 10px; left: 50px;}
 .logoBox img{width: 100px; height: 100px;} 
-#banner{overflow: hidden; display: flex; flex-wrap: nowrap; position: fixed;z-index: -10;  white-space:nowrap; top: 0; left: 0; right: 0; bottom: 0;}
-.bannerImg{ height: 100vh; overflow: hidden; display: flex; position: relative; flex: 0 0 100vw; align-items: center; justify-content:center;}
-.bannerImg img{width: 100%;}
+.outer-banner{width: 100vh; height: 100vw; transform: rotate(-90deg) translateX(-100vh); transform-origin: top left; overflow-y: scroll; overflow-x: hidden; scroll-behavior: smooth;}
+#banner{display: flex; flex-direction: row; width: 300vw; transform: rotate(90deg) translateY(-100vh); transform-origin: top left; overflow-y: hidden;  scroll-snap-type: mandatory; scroll-snap-points-y: repeat(100vw);scroll-snap-type: x mandatory; position: relative;}
+.bannerImg{width: 100vw;}
+.bannerImg img{width: 100vw; scroll-snap-align: start; scroll-snap-stop: normal; scroll-behavior: smooth;}
+.bannerImg .best{position: absolute; top: 20%; left: 10px; font-size: 200px;color: #fff; font-family: 'NEXON Lv1 Gothic OTF Light';}
+
 .gnbWrap{position: fixed; width: 80%; z-index: 1; display: flex; justify-content: flex-end; right: 100px; top: 50px;}
 #gnb li{float: left; margin-left: 50px;}
 #gnb li a{font-size: 17px; color: #fff; font-family: 'NEXON Lv1 Gothic OTF Light'; transition: all 0.4s ease;}
